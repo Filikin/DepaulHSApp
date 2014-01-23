@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+     
+<RelativeLayout android:id="@+id/LinearLayout1" xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent" android:orientation="vertical">
+        <ImageView android:maxHeight="20dp" android:src="@drawable/encludelogo" android:id="@drawable/encludelogo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentRight="true" android:visibility="invisible"></ImageView>
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:visibility="invisible" android:textSize="20dp" android:id="@string/appby" android:text="@string/appby" android:layout_above="@drawable/encludelogo" android:layout_toLeftOf="@drawable/encludelogo" android:layout_marginRight="60dp"></TextView>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:id="@string/version" android:text="@string/version"></TextView>
+        <ImageView android:layout_width="fill_parent" android:src="@drawable/splash" android:id="@+id/ImageView1" android:scaleType="fitCenter" android:layout_height="wrap_content" android:layout_marginBottom="18dp" android:layout_centerInParent="true"></ImageView>
+</RelativeLayout>

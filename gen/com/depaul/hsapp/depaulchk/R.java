@@ -84,27 +84,31 @@ public final class R {
         public static final int sf__title_text_width=0x7f08001b;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int sf__edit_icon=0x7f020001;
-        public static final int sf__header_bg=0x7f020002;
-        public static final int sf__header_drop_shadow=0x7f020003;
-        public static final int sf__header_left_border=0x7f020004;
-        public static final int sf__header_refresh=0x7f020005;
-        public static final int sf__header_refresh_press=0x7f020006;
-        public static final int sf__header_refresh_states=0x7f020007;
-        public static final int sf__header_right_border=0x7f020008;
-        public static final int sf__highlight_glare=0x7f020009;
-        public static final int sf__ic_refresh_sync_anim0=0x7f02000a;
-        public static final int sf__icon=0x7f02000b;
-        public static final int sf__login_content_header=0x7f02000c;
-        public static final int sf__nav_shadow=0x7f02000d;
-        public static final int sf__oauth_background=0x7f02000e;
-        public static final int sf__oauth_container_dropshadow=0x7f02000f;
-        public static final int sf__progress_spinner=0x7f020010;
-        public static final int sf__refresh_loader=0x7f020011;
-        public static final int sf__toolbar_background=0x7f020012;
+        public static final int encludelogo=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int sf__edit_icon=0x7f020002;
+        public static final int sf__header_bg=0x7f020003;
+        public static final int sf__header_drop_shadow=0x7f020004;
+        public static final int sf__header_left_border=0x7f020005;
+        public static final int sf__header_refresh=0x7f020006;
+        public static final int sf__header_refresh_press=0x7f020007;
+        public static final int sf__header_refresh_states=0x7f020008;
+        public static final int sf__header_right_border=0x7f020009;
+        public static final int sf__highlight_glare=0x7f02000a;
+        public static final int sf__ic_refresh_sync_anim0=0x7f02000b;
+        public static final int sf__icon=0x7f02000c;
+        public static final int sf__login_content_header=0x7f02000d;
+        public static final int sf__nav_shadow=0x7f02000e;
+        public static final int sf__oauth_background=0x7f02000f;
+        public static final int sf__oauth_container_dropshadow=0x7f020010;
+        public static final int sf__progress_spinner=0x7f020011;
+        public static final int sf__refresh_loader=0x7f020012;
+        public static final int sf__toolbar_background=0x7f020013;
+        public static final int splash=0x7f020014;
     }
     public static final class id {
+        public static final int ImageView1=0x7f0b001b;
+        public static final int LinearLayout1=0x7f0b001a;
         public static final int manage_space_layout=0x7f0b0010;
         public static final int sf__apply_button=0x7f0b0003;
         public static final int sf__auth_container=0x7f0b0016;
@@ -116,10 +120,10 @@ public final class R {
         public static final int sf__layout_root=0x7f0b0000;
         public static final int sf__load_separator=0x7f0b000f;
         public static final int sf__load_spinner=0x7f0b000e;
-        public static final int sf__menu_clear_cookies=0x7f0b001c;
-        public static final int sf__menu_clear_custom_url=0x7f0b001a;
-        public static final int sf__menu_pick_server=0x7f0b001b;
-        public static final int sf__menu_reload=0x7f0b001d;
+        public static final int sf__menu_clear_cookies=0x7f0b001e;
+        public static final int sf__menu_clear_custom_url=0x7f0b001c;
+        public static final int sf__menu_pick_server=0x7f0b001d;
+        public static final int sf__menu_reload=0x7f0b001f;
         public static final int sf__oauth_webview=0x7f0b0007;
         public static final int sf__passcode_error=0x7f0b0014;
         public static final int sf__passcode_forgot=0x7f0b0013;
@@ -147,6 +151,7 @@ public final class R {
         public static final int sf__server_picker=0x7f030007;
         public static final int sf__server_picker_header=0x7f030008;
         public static final int sf__server_picker_list=0x7f030009;
+        public static final int splashscreen=0x7f03000a;
     }
     public static final class menu {
         public static final int sf__clear_custom_url=0x7f0a0000;
@@ -168,6 +173,7 @@ public final class R {
          */
         public static final int app_name=0x7f05002c;
         public static final int app_package=0x7f05002e;
+        public static final int appby=0x7f050031;
         public static final int oauthRedirectURI=0x7f050001;
         /**  If you're only supporting recent versions of Android (e.g. 3.x and up), you can override this to be touch and get a better looking login UI  
          */
@@ -226,6 +232,7 @@ public final class R {
         public static final int sf__ssl_not_yet_valid=0x7f05000b;
         public static final int sf__ssl_unknown_error=0x7f05000d;
         public static final int sf__ssl_untrusted=0x7f05000c;
+        public static final int version=0x7f050032;
     }
     public static final class style {
         public static final int SalesforceSDK=0x7f090000;
