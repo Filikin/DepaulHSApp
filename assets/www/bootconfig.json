@@ -1,0 +1,11 @@
+{
+    "remoteAccessConsumerKey": "3MVG9PhR6g6B7ps5JlX7B1FDrMzlBcEBdDysKG9t89Vg5OPC8hbNfyx7PsovURS0w6ZU4SLwv0kODek_YVw14",
+    "oauthRedirectURI": "depaulchk:///mobilesdk/detect/oauth/done",
+    "oauthScopes": ["api","full","refresh_token"],
+    "isLocal": true,
+    "startPage": "index.html",
+    "errorPage": "error.html",
+    "shouldAuthenticate": true,
+    "attemptOfflineLoad": false,
+    "androidPushNotificationClientId": ""
+}
