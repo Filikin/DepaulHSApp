@@ -45,8 +45,8 @@ OfflineQueue.UploadQueue = function(whichSoup, callback,error) {
 							}
 							else
 							{
-								updateField = {"Result__c":records[i].Result__c};
-								sfObject = 'Item_Check__c';
+//								updateField = {"Result__c":records[i].Result__c};
+								updateField = {"Result__c":records[i].Result__c, "Item_Check_Comment__c":records[i].Item_Check_Comment__c, "Type_of_Hazard__c":records[i].Type_of_Hazard__c};								sfObject = 'Item_Check__c';
 							};
 							forcetkClient.update(sfObject, records[i].Id, updateField, function(){
 //								console.log('QUEUED SFDC Update Success!');
