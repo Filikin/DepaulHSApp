@@ -101,7 +101,7 @@ WellBeing.prototype.loadRecordsFromSalesforce = function(error)
 	        else nextHourStarts = new Date (timeNow.getFullYear(), timeNow.getMonth(), timeNow.getDate(), timeNow.getHours(), 0, 0, 0);
 	        nextHourEnds = new Date (timeNow.getFullYear(), timeNow.getMonth(), timeNow.getDate(), timeNow.getHours(), timeNow.getMinutes() + Show_user_checks_in_future_minutes, 0, 0);
 
-	        forcetkClient.query("SELECT Id, SortKey__c, Name, Room__c, Service_User_Name__c, Time_of_Check__c, Wellbeing_Status__c FROM Wellbeing_Check__c where Building__c = '" + building + "' and Time_of_Check__c >= " + nextHourStarts.toJSON() + " and Time_of_Check__c <= " + nextHourEnds.toJSON() + " order by SortKey__c limit 200", function(response){  
+	        forcetkClient.query("SELECT Id, SortKey__c, Name, Room__c, Service_User_Name__c, Time_of_Check__c, Time_to_display_on_phone__c, Wellbeing_Status__c FROM Wellbeing_Check__c where Building__c = '" + building + "' and Time_of_Check__c >= " + nextHourStarts.toJSON() + " and Time_of_Check__c <= " + nextHourEnds.toJSON() + " order by SortKey__c limit 200", function(response){  
                 that.registerWellBeingSoup(function(){
 					that.storeRecords(response.records,error);
 				},error);
@@ -231,7 +231,8 @@ WellBeing.prototype.onSuccessSfdcWellbeingChecks = function(records)
 WellBeing.prototype.displayOneCheck = function (i, wellbeing)
 {
 	var that=this;
-	var checkTime = wellbeing.Time_of_Check__c.substring (11,16);
+//	var checkTime = wellbeing.Time_of_Check__c.toLocaleString().substring (11,16);
+	var checkTime = wellbeing.Time_to_display_on_phone__c;
     var newLi = '<li><div data-role="fieldcontain">';
     newLi += "<fieldset data-role='controlgroup' data-type='horizontal' id='b" + i + "' >";
     newLi += "<legend>" + checkTime + " " + wellbeing.Room__c + " - " + wellbeing.Service_User_Name__c + "</legend>";

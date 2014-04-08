@@ -84,7 +84,7 @@ BuildingChecks.prototype.loadRecordsFromSalesforce = function(error)
 	        else nextHourStarts = new Date (timeNow.getFullYear(), timeNow.getMonth(), timeNow.getDate(), timeNow.getHours(), 0, 0, 0);
 	        nextHourEnds = new Date (timeNow.getFullYear(), timeNow.getMonth(), timeNow.getDate(), timeNow.getHours(), timeNow.getMinutes() + Show_item_checks_in_future_minutes, 0, 0);
 
-			forcetkClient.query("SELECT Id, SortKey__c, Name, Area__c, Area_Item_Name__c, Time_of_Check__c, Result__c, Type_of_Hazard__c, Item_Check_Comment__c, Current_Status_of_Item__c from Item_Check__c where Area_Item__r.Building__c = '" + building + "' and Time_of_Check__c >= " + nextHourStarts.toJSON() + " and Time_of_Check__c <= " + nextHourEnds.toJSON() + " order by SortKey__c limit 500", function(response)
+			forcetkClient.query("SELECT Id, SortKey__c, Name, Area__c, Area_Item_Name__c, Time_of_Check__c, Time_to_display_on_phone__c, Result__c, Type_of_Hazard__c, Item_Check_Comment__c, Current_Status_of_Item__c from Item_Check__c where Area_Item__r.Building__c = '" + building + "' and Time_of_Check__c >= " + nextHourStarts.toJSON() + " and Time_of_Check__c <= " + nextHourEnds.toJSON() + " order by SortKey__c limit 500", function(response)
 			{  
                 that.registerBuildingSoup(function(){
 					that.storeRecords(response.records,error);
@@ -302,8 +302,9 @@ BuildingChecks.prototype.onSuccessSfdcBuildingChecks = function(records)
 	    	{
 	    		currentArea = buildingCheck.Area__c;
 	    		var checkTime = buildingCheck.Time_of_Check__c.substring (11,16);
+	    		var displayTime = buildingCheck.Time_to_display_on_phone__c;
 	    		var areaID = buildingCheck.Area__c.replace(/\W/g,"")+checkTime.replace(/:/g,"");
-	    		var newListElement = '<li id="'+areaID+'"><a href="#areapage?area='+areaID+'">'+checkTime + " " + buildingCheck.Area__c + '</a></li>';
+	    		var newListElement = '<li id="'+areaID+'"><a href="#areapage?area='+areaID+'">'+displayTime + " " + buildingCheck.Area__c + '</a></li>';
 	    		if (debugMode) logToConsole ('remove areaID ' + newListElement);
 	    		nestedList += newListElement;
 
